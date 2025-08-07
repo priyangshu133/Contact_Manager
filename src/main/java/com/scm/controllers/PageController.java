@@ -75,9 +75,6 @@ public class PageController {
     public String register(Model model) {
 
         UserForm userForm = new UserForm();
-        // default data bhi daal sakte hai
-        // userForm.setName("Durgesh");
-        // userForm.setAbout("This is about : Write something about yourself");
         model.addAttribute("userForm", userForm);
 
         return "register";
@@ -108,7 +105,7 @@ public class PageController {
         user.setPhoneNumber(userForm.getPhoneNumber());
         user.setEnabled(false);
         user.setProfilePic(
-                "https://www.learncodewithdurgesh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdurgesh_sir.35c6cb78.webp&w=1920&q=75");
+                "https://images.seeklogo.com/logo-png/45/1/google-contacts-logo-png_seeklogo-456656.png");
 
         User savedUser = userService.saveUser(user);
 
